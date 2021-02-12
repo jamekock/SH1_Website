@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@if (ViewBag.Peliculas != null)
+{
+    <table border="1" cellspacing="0" width="100">
+        <tr>
+            <th>Nombre</th>
+            <th>Autor</th>
+            <th>Actores</th>
+            <th>Año</th>
+            <th>Sipnosis</th>
+        </tr>
+
+        <tr>
+            <td>@ViewBag.Peliculas["nombre"]</td>
+            <td>@ViewBag.Peliculas["autor"]</td>
+            <td>@ViewBag.Peliculas["actores"]</td>
+            <td>@ViewBag.Peliculas["año"]</td>
+            <td>@ViewBag.Peliculas["sipnosis"]</td>
+        </tr>
+    </table>
+}
+<h2>Index</h2>
+
