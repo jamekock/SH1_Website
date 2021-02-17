@@ -18,6 +18,12 @@ namespace Website
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+            name: "Peliculas",
+            url: "{controller}/{action}/{id}",
+            defaults: new { controller = "Peliculas", action = "Index", id = UrlParameter.Optional }
+            );
         }
     }
 }

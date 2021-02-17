@@ -1,27 +1,44 @@
-﻿
+﻿@model IEnumerable<Website.Models.CrudModel>
 @{
+    /**/
+
     ViewBag.Title = "Index";
+
+
+
 }
 
-@if (ViewBag.Peliculas != null)
-{
-    <table border="1" cellspacing="0" width="100">
-        <tr>
-            <th>Nombre</th>
-            <th>Autor</th>
-            <th>Actores</th>
-            <th>Año</th>
-            <th>Sipnosis</th>
-        </tr>
+    <a href="Create/"> Registrar pelicula </a>
+<br /><br />
 
-        <tr>
-            <td>@ViewBag.Peliculas["nombre"]</td>
-            <td>@ViewBag.Peliculas["autor"]</td>
-            <td>@ViewBag.Peliculas["actores"]</td>
-            <td>@ViewBag.Peliculas["año"]</td>
-            <td>@ViewBag.Peliculas["sipnosis"]</td>
-        </tr>
-    </table>
-}
-<h2>Index</h2>
+      <table border="1" cellspacing="0" width="1000">
+          <tr>
+              <th>Id</th>
+              <th>Nombre</th>
+              <th>Autor</th>
+              <th>Actores</th>
+              <th>Año</th>
+              <th>Sipnosis</th>
+              <th>Acciones</th>
+          </tr>
+          @foreach (var item in Model)
+          {
+          <tr>
+              <td>@item.Id</td>
+              <td>@item.Nombre</td>
+              <td>@item.Autor</td>
+              <td>@item.Actores</td>
+              <td>@item.Año</td>
+              <td>@item.Sipnosis</td>
+              <td>
+              <a href="Edit/@item.Id">Actualizar</a>
+              <a href="Delete/@item.Id">Eliminar</a>
+              </td>
+          </tr>
+          }
+      </table>
+
+<h2></h2>
+
+
 
