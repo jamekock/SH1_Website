@@ -18,7 +18,7 @@ namespace Website.Models
         public string Año { get; set; }
         public string Sipnosis { get; set; }
 
-        public List<CrudModel> Consulta(int? id= null)
+        public List<CrudModel> Consulta(int? id = null)
         {
             using(MySqlConnection cn = db.dbConnect()) {
                 string sql = "SELECT * FROM peliculas ";

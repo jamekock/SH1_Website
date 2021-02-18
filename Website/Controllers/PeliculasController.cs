@@ -9,9 +9,7 @@ namespace Website.Controllers
 {
     public class PeliculasController : Controller
     {
-        // POST: ../Peliculas/
-        //[HttpPost]
-        public ActionResult Index() //FormCollection collection
+        public ActionResult Index()
         {
             var data = new CrudModel().Consulta();
             return View(data);
@@ -53,9 +51,5 @@ namespace Website.Controllers
             new CrudModel().Actualizar(model);
             return RedirectToAction("/Index");
         }
-
-
-
-
     }
 }
