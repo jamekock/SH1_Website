@@ -7,6 +7,7 @@ using System.Data;
 using Website.Models;
 namespace Website.Controllers
 {
+    [Authorize]
     public class PeliculasController : Controller
     {
         public ActionResult Index()

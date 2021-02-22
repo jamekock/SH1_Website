@@ -20,9 +20,15 @@ namespace Website
             );
 
             routes.MapRoute(
-            name: "Peliculas",
-            url: "{controller}/{action}/{id}",
-            defaults: new { controller = "Peliculas", action = "Index", id = UrlParameter.Optional }
+                name: "Peliculas",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Peliculas", action = "Index", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                name: "Login",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Login", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
